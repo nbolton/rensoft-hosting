@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC591670-9A05-40C3-8EE0-A9AB6679DD0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.Hosting.DataAccess</RootNamespace>
+    <AssemblyName>Rensoft.Hosting.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\CustomerAdapter.cs" />
+    <Compile Include="Adapters\DnsZoneAdapter.cs" />
+    <Compile Include="Adapters\RhspAdapter.cs" />
+    <Compile Include="Adapters\RhspAdapterErrorEventArgs.cs" />
+    <Compile Include="Adapters\RhspAdapterErrorEventHandler.cs" />
+    <Compile Include="Adapters\RhspAdapterFactory.cs" />
+    <Compile Include="Adapters\DiagnosticAdapter.cs" />
+    <Compile Include="Adapters\RhspAdapterUsageAttribute.cs" />
+    <Compile Include="Adapters\ServerConfigAdapterAccessors.cs" />
+    <Compile Include="Adapters\ServerStatusAdapter.cs" />
+    <Compile Include="Adapters\WebsiteAdapter.cs" />
+    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="Importing\ImportAction.cs" />
+    <Compile Include="Importing\ImportActionInfo.cs" />
+    <Compile Include="Importing\ImportStatusEventArgs.cs" />
+    <Compile Include="Importing\ImportStatusEventHandler.cs" />
+    <Compile Include="Importing\IRhspImportable.cs" />
+    <Compile Include="IRhspDataChild.cs" />
+    <Compile Include="RhspClientContext.cs" />
+    <Compile Include="RhspSecurity.cs" />
+    <Compile Include="Service References\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceReference\Customer.cs" />
+    <Compile Include="ServiceReference\DnsRecord.cs" />
+    <Compile Include="ServiceReference\DnsZone.cs" />
+    <Compile Include="ServiceReference\Password.cs" />
+    <Compile Include="ServiceReference\RhspData.cs" />
+    <Compile Include="ServiceReference\RhspServiceClient.cs" />
+    <Compile Include="Adapters\ServerConfigAdapter.cs" />
+    <Compile Include="ConnectionTestResult.cs" />
+    <Compile Include="Importing\ImportSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RhspAuthMode.cs" />
+    <Compile Include="RhspClientManager.cs" />
+    <Compile Include="RhspException.cs" />
+    <Compile Include="ServiceReference\RhspCommand.cs" />
+    <Compile Include="ServiceReference\RhspCommandResponse.cs" />
+    <Compile Include="ServiceReference\RhspConnection.cs" />
+    <Compile Include="ServiceReference\RhspParameter.cs" />
+    <Compile Include="ServiceReference\RhspParameterCollection.cs" />
+    <Compile Include="Importing\ImportStatus.cs" />
+    <Compile Include="ServiceReference\SecurityTemplate.cs" />
+    <Compile Include="ServiceReference\Website.cs" />
+    <Compile Include="ServiceReference\RhspDataID.cs" />
+    <Compile Include="ServiceReference\WebsiteHost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\ServiceReference\Arrays.xsd" />
+    <None Include="Service References\ServiceReference\Rensoft.Hosting.Server.Data.xsd" />
+    <None Include="Service References\ServiceReference\Rensoft.Hosting.Server.xsd" />
+    <None Include="Service References\ServiceReference\service.wsdl" />
+    <None Include="Service References\ServiceReference\service.xsd" />
+    <None Include="Service References\ServiceReference\service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference\Rensoft.Hosting.DataAccess.ServiceReference.RhspCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\Rensoft.Hosting.Server.Managers.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

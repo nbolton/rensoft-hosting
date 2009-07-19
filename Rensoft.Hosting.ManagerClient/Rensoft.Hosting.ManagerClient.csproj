@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB8C8DAF-EE08-456D-90ED-F3E989DB013D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.Hosting.ManagerClient</RootNamespace>
+    <AssemblyName>Rensoft.Hosting.ManagerClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\Rensoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft.Windows.Forms, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigManagerAccessors.cs" />
+    <Compile Include="DataEditing\DnsRecordTypeInfo.cs" />
+    <Compile Include="DataEditing\DnsZoneEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEditing\DnsZoneEditor.Designer.cs">
+      <DependentUpon>DnsZoneEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\CustomerFtpUsersEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\CustomerFtpUsersEditorControl.Designer.cs">
+      <DependentUpon>CustomerFtpUsersEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteDnsZoneEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteDnsZoneEditorControl.Designer.cs">
+      <DependentUpon>WebsiteDnsZoneEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteHostEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteHostEditorControl.Designer.cs">
+      <DependentUpon>WebsiteHostEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteSecurityEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteSecurityEditorControl.Designer.cs">
+      <DependentUpon>WebsiteSecurityEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\FtpUserCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEditing\FtpUserCreator.Designer.cs">
+      <DependentUpon>FtpUserCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\SecurityTemplateAccessInfo.cs" />
+    <Compile Include="DataEditing\WebsiteHostProtocolInfo.cs" />
+    <Compile Include="DataEditing\WebsiteIisManagedPipelineModeInfo.cs" />
+    <Compile Include="DataViewing\CustomerViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataViewing\CustomerViewer.Designer.cs">
+      <DependentUpon>CustomerViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewing\LocalDataViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataViewing\LocalDataViewerControl.Designer.cs">
+      <DependentUpon>LocalDataViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewing\ViewerErrorEventArgs.cs" />
+    <Compile Include="DataViewing\ViewerErrorEventHandler.cs" />
+    <Compile Include="DataViewing\ServerStatusViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataViewing\ServerStatusViewer.Designer.cs">
+      <DependentUpon>ServerStatusViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewing\WebsiteViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataViewing\WebsiteViewer.Designer.cs">
+      <DependentUpon>WebsiteViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DnsImportWizard\DnsImportWizardMode.cs" />
+    <Compile Include="DnsImportWizard\SourcePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DnsImportWizard\SourcePage.Designer.cs">
+      <DependentUpon>SourcePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="DnsImportWizard\DnsImportWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DnsImportWizard\DnsImportWizardForm.Designer.cs">
+      <DependentUpon>DnsImportWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DnsImportWizard\DnsImportWizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DnsImportWizard\DnsImportWizardPage.Designer.cs">
+      <DependentUpon>DnsImportWizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DnsImportWizard\FinishPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DnsImportWizard\FinishPage.Designer.cs">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DnsImportWizard\SelectPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DnsImportWizard\SelectPage.Designer.cs">
+      <DependentUpon>SelectPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalContext.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="ConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionDialog.Designer.cs">
+      <DependentUpon>ConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConnectionDialog.resx">
+      <DependentUpon>ConnectionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\DnsZoneEditor.resx">
+      <DependentUpon>DnsZoneEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\CustomerFtpUsersEditorControl.resx">
+      <DependentUpon>CustomerFtpUsersEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\WebsiteDnsZoneEditorControl.resx">
+      <DependentUpon>WebsiteDnsZoneEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\WebsiteGeneralEditorControl.resx">
+      <DependentUpon>WebsiteGeneralEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\WebsiteHostEditorControl.resx">
+      <DependentUpon>WebsiteHostEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\WebsiteSecurityEditorControl.resx">
+      <DependentUpon>WebsiteSecurityEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorForms\WebsiteEditorForm.resx">
+      <DependentUpon>WebsiteEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\FtpUserCreator.resx">
+      <DependentUpon>FtpUserCreator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewing\CustomerViewer.resx">
+      <DependentUpon>CustomerViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewing\LocalDataViewerControl.resx">
+      <DependentUpon>LocalDataViewerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewing\ServerStatusViewer.resx">
+      <DependentUpon>ServerStatusViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewing\WebsiteViewer.resx">
+      <DependentUpon>WebsiteViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DnsImportWizard\FinishPage.resx">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DnsImportWizard\SelectPage.resx">
+      <DependentUpon>SelectPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DnsImportWizard\SourcePage.resx">
+      <DependentUpon>SourcePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorControls\CustomerGeneralEditorControl.resx">
+      <DependentUpon>CustomerGeneralEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEditing\EditorForms\CustomerEditorForm.resx">
+      <DependentUpon>CustomerEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\CustomerPage.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\FinishPage.resx">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\WebsiteWizardForm.resx">
+      <DependentUpon>WebsiteWizardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\WebsiteWizardPage.resx">
+      <DependentUpon>WebsiteWizardPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebsiteWizard\WelcomePage.resx">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\CustomerGeneralEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\CustomerGeneralEditorControl.Designer.cs">
+      <DependentUpon>CustomerGeneralEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteGeneralEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorControls\WebsiteGeneralEditorControl.Designer.cs">
+      <DependentUpon>WebsiteGeneralEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorForms\CustomerEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorForms\CustomerEditorForm.Designer.cs">
+      <DependentUpon>CustomerEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\EditorForms\WebsiteEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEditing\EditorForms\WebsiteEditorForm.Designer.cs">
+      <DependentUpon>WebsiteEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\LocalDataEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataEditing\LocalDataEditorControl.Designer.cs">
+      <DependentUpon>LocalDataEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataEditing\LocalDataEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEditing\LocalDataEditorForm.Designer.cs">
+      <DependentUpon>LocalDataEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\CustomerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\CustomerPage.Designer.cs">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\FinishPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\FinishPage.Designer.cs">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\WebsiteWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\WebsiteWizardForm.Designer.cs">
+      <DependentUpon>WebsiteWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\WebsiteWizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\WebsiteWizardPage.Designer.cs">
+      <DependentUpon>WebsiteWizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebsiteWizard\WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebsiteWizard\WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rensoft.Hosting.DataAccess\Rensoft.Hosting.DataAccess.csproj">
+      <Project>{FC591670-9A05-40C3-8EE0-A9AB6679DD0C}</Project>
+      <Name>Rensoft.Hosting.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Failure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InProgress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Rensoft.Hosting.DataAccess.ServiceReference.Customer.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.DataAccess.ServiceReference.WebsiteHost.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.ManagerClient.DataEditing.DnsRecordTypeInfo.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.ManagerClient.DataEditing.SecurityTemplateAccessInfo.datasource" />
+    <None Include="Resources\Pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Delete.ico" />
+    <None Include="Resources\Delete1.ico" />
+    <Content Include="Resources\New.ico" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.DataAccess.Importing.ImportActionInfo.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.DataAccess.ServiceReference.ServerStatusElement.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.ManagerClient.DataEditing.WebsiteHostProtocolInfo.datasource" />
+    <None Include="Properties\DataSources\Rensoft.Hosting.ManagerClient.DataEditing.WebsiteIisManagedPipelineModeInfo.datasource" />
+    <None Include="Resources\Preview.ico" />
+    <Content Include="Resources\Refresh.ico" />
+    <Content Include="Resources\Rensoft.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

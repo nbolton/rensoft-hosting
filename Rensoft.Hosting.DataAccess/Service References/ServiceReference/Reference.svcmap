@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a610dc4-42ed-49ff-a310-ff56d68ecf8b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:49160/RhspService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="b3983589-728e-4869-8573-331d7efb8880" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="8ca0ddca-91b0-41d7-a267-7713354bca7b" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="Rensoft.Hosting.Server.Data.xsd" MetadataType="Schema" ID="eb6d4c4b-8e69-4cf9-b833-d088619443c9" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="Rensoft.Hosting.Server.xsd" MetadataType="Schema" ID="c1da6ecd-fff1-4ef1-950c-667eb6e8e182" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="Rensoft.Hosting.Server.Managers.xsd" MetadataType="Schema" ID="24848b4d-a7e0-45cf-8cad-7ebda05cf800" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="7f83d5a3-5742-48fb-a140-faee62127d37" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ff1dc7fe-b882-4b69-b9bb-7bd34adad9b2" SourceId="1" SourceUrl="net.tcp://localhost:49160/RhspService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,169 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A52DF229-E87B-49CE-9E84-33A3E1864E71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.Hosting.Server</RootNamespace>
+    <AssemblyName>Rensoft.Hosting.Server</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Microsoft.Web.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft.ServerManagement, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.ServerManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildPendingAction.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\FtpPermissions.cs" />
+    <Compile Include="Data\FtpUser.cs" />
+    <Compile Include="Data\Password.cs" />
+    <Compile Include="Data\CleanWebsite.cs" />
+    <Compile Include="Data\RhspData.cs" />
+    <Compile Include="Data\SecurityTemplate.cs" />
+    <Compile Include="Data\SecurityTemplateAccess.cs" />
+    <Compile Include="Data\ServerStatusActionResult.cs" />
+    <Compile Include="Data\ServerStatusElement.cs" />
+    <Compile Include="Data\ServerStatusCondition.cs" />
+    <Compile Include="Data\WebsiteHostProtocol.cs" />
+    <Compile Include="Data\WebsiteIisManagedPipelineMode.cs" />
+    <Compile Include="Data\WebsiteIisMode.cs" />
+    <Compile Include="Data\WebsiteIisSite.cs" />
+    <Compile Include="IRhspDataChild.cs" />
+    <Compile Include="IRhspDataParent.cs" />
+    <Compile Include="Managers\Config\ServerConfigManagerAccessors.cs" />
+    <Compile Include="Data\DnsRecord.cs" />
+    <Compile Include="Data\DnsRecordType.cs" />
+    <Compile Include="Data\DnsZone.cs" />
+    <Compile Include="Managers\CustomerDeleteResult.cs" />
+    <Compile Include="Managers\DnsZoneManager.cs" />
+    <Compile Include="Managers\IscBindManager.cs" />
+    <Compile Include="Managers\FileZillaManager.cs" />
+    <Compile Include="Managers\WebsiteDeleteResult.cs" />
+    <Compile Include="RhspDataID.cs" />
+    <Compile Include="Data\Website.cs" />
+    <Compile Include="Data\WebsiteHost.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IRhspService.cs" />
+    <Compile Include="Managers\Config\ConfigManager.cs" />
+    <Compile Include="Data\RhspDataAttribute.cs" />
+    <Compile Include="IRhspData.cs" />
+    <Compile Include="Managers\CustomerManager.cs" />
+    <Compile Include="Managers\DiagnosticManager.cs" />
+    <Compile Include="Managers\Config\HostingConfigManager.cs" />
+    <Compile Include="Managers\LegacyManager.cs" />
+    <Compile Include="Managers\RhspManager.cs" />
+    <Compile Include="Managers\RhspManagerInvoker.cs" />
+    <Compile Include="Managers\RhspManagerUsageAttribute.cs" />
+    <Compile Include="Managers\Config\ServerConfigManager.cs" />
+    <Compile Include="Managers\SecurityTemplateManager.cs" />
+    <Compile Include="Managers\ServerStatusManager.cs" />
+    <Compile Include="Managers\WebsiteManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RhspCommandCarrier.cs" />
+    <Compile Include="RhspCommandContext.cs" />
+    <Compile Include="RhspCommandHandler.cs" />
+    <Compile Include="RhspCommandResponse.cs" />
+    <Compile Include="RhspDataMode.cs" />
+    <Compile Include="RhspException.cs" />
+    <Compile Include="RhspModuleMethodAttribute.cs" />
+    <Compile Include="RhspParameter.cs" />
+    <Compile Include="RhspParameterCollection.cs" />
+    <Compile Include="RhspService.cs" />
+    <Compile Include="RhspCommand.cs" />
+    <Compile Include="RhspServiceContext.cs" />
+    <Compile Include="WebAdminMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rensoft.Hosting\Rensoft.Hosting.csproj">
+      <Project>{323DC876-EBB7-41B5-8FA8-9A682346362E}</Project>
+      <Name>Rensoft.Hosting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server.Managers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server.Managers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="WebsiteDeleteResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errors" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebsiteDeleteResult" nillable="true" type="tns:WebsiteDeleteResult" />
+  <xs:complexType name="CustomerDeleteResult">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errors" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerDeleteResult" nillable="true" type="tns:CustomerDeleteResult" />
+</xs:schema>

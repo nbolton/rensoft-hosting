@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="RhspDataID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspDataID" nillable="true" type="tns:RhspDataID" />
+  <xs:simpleType name="ChildPendingAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Discard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChildPendingAction" nillable="true" type="tns:ChildPendingAction" />
+  <xs:complexType name="RhspCommandCarrier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Command" nillable="true" type="tns:RhspCommand" />
+      <xs:element minOccurs="0" name="Context" nillable="true" type="tns:RhspCommandContext" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspCommandCarrier" nillable="true" type="tns:RhspCommandCarrier" />
+  <xs:complexType name="RhspCommand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parameters" nillable="true" type="tns:RhspParameterCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspCommand" nillable="true" type="tns:RhspCommand" />
+  <xs:complexType name="RhspParameterCollection">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Table" nillable="true" type="q1:ArrayOfKeyValueOfstringRhspParameterllBKQEXB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspParameterCollection" nillable="true" type="tns:RhspParameterCollection" />
+  <xs:complexType name="RhspParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataMode" type="tns:RhspDataMode" />
+      <xs:element minOccurs="0" name="DataTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RawValue" nillable="true" type="q2:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspParameter" nillable="true" type="tns:RhspParameter" />
+  <xs:simpleType name="RhspDataMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Single" />
+      <xs:enumeration value="Array" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RhspDataMode" nillable="true" type="tns:RhspDataMode" />
+  <xs:complexType name="RhspCommandContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HostingUserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspCommandContext" nillable="true" type="tns:RhspCommandContext" />
+  <xs:complexType name="RhspCommandResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataMode" type="tns:RhspDataMode" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RawData" nillable="true" type="q3:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspCommandResponse" nillable="true" type="tns:RhspCommandResponse" />
+</xs:schema>

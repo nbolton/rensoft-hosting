@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" />
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FtpEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FtpUserArray" nillable="true" type="tns:ArrayOfFtpUser" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="RhspData">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="DataID" nillable="true" type="q1:RhspDataID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RhspData" nillable="true" type="tns:RhspData" />
+  <xs:complexType name="ArrayOfFtpUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FtpUser" nillable="true" type="tns:FtpUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFtpUser" nillable="true" type="tns:ArrayOfFtpUser" />
+  <xs:complexType name="FtpUser">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="DataID" nillable="true" type="q2:RhspDataID" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="tns:Password" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PendingAction" type="q3:ChildPendingAction" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FtpUser" nillable="true" type="tns:FtpUser" />
+  <xs:complexType name="Password">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Password" nillable="true" type="tns:Password" />
+  <xs:complexType name="ServerStatusActionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServerStatusActionResult" nillable="true" type="tns:ServerStatusActionResult" />
+  <xs:complexType name="ServerStatusElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionCommand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Condition" type="tns:ServerStatusCondition" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServerStatusElement" nillable="true" type="tns:ServerStatusElement" />
+  <xs:simpleType name="ServerStatusCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ServerStatusCondition" nillable="true" type="tns:ServerStatusCondition" />
+  <xs:complexType name="DnsZone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DefaultTtl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PendingAction" type="q4:ChildPendingAction" />
+          <xs:element minOccurs="0" name="RecordArray" nillable="true" type="tns:ArrayOfDnsRecord" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="WebsiteID" nillable="true" type="q5:RhspDataID" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DnsZone" nillable="true" type="tns:DnsZone" />
+  <xs:complexType name="ArrayOfDnsRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DnsRecord" nillable="true" type="tns:DnsRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDnsRecord" nillable="true" type="tns:ArrayOfDnsRecord" />
+  <xs:complexType name="DnsRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PendingAction" type="q6:ChildPendingAction" />
+          <xs:element minOccurs="0" name="RecordType" type="tns:DnsRecordType" />
+          <xs:element minOccurs="0" name="Ttl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DnsRecord" nillable="true" type="tns:DnsRecord" />
+  <xs:simpleType name="DnsRecordType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NS" />
+      <xs:enumeration value="MX" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="CNAME" />
+      <xs:enumeration value="TXT" />
+      <xs:enumeration value="PTR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DnsRecordType" nillable="true" type="tns:DnsRecordType" />
+  <xs:complexType name="Website">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="CustomerID" nillable="true" type="q7:RhspDataID" />
+          <xs:element minOccurs="0" name="DnsZoneArray" nillable="true" type="tns:ArrayOfDnsZone" />
+          <xs:element minOccurs="0" name="HostArray" nillable="true" type="tns:ArrayOfWebsiteHost" />
+          <xs:element minOccurs="0" name="IisSite" nillable="true" type="tns:WebsiteIisSite" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PrimaryHostID" nillable="true" type="q8:RhspDataID" />
+          <xs:element minOccurs="0" name="SecurityArray" nillable="true" type="tns:ArrayOfSecurityTemplate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Website" nillable="true" type="tns:Website" />
+  <xs:complexType name="ArrayOfDnsZone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DnsZone" nillable="true" type="tns:DnsZone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDnsZone" nillable="true" type="tns:ArrayOfDnsZone" />
+  <xs:complexType name="ArrayOfWebsiteHost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WebsiteHost" nillable="true" type="tns:WebsiteHost" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWebsiteHost" nillable="true" type="tns:ArrayOfWebsiteHost" />
+  <xs:complexType name="WebsiteHost">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IpAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PendingAction" type="q9:ChildPendingAction" />
+          <xs:element minOccurs="0" name="Port" type="xs:int" />
+          <xs:element minOccurs="0" name="Protocol" type="tns:WebsiteHostProtocol" />
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="WebsiteID" nillable="true" type="q10:RhspDataID" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WebsiteHost" nillable="true" type="tns:WebsiteHost" />
+  <xs:simpleType name="WebsiteHostProtocol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Http" />
+      <xs:enumeration value="Https" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WebsiteHostProtocol" nillable="true" type="tns:WebsiteHostProtocol" />
+  <xs:complexType name="WebsiteIisSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationPoolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdentityPassword" nillable="true" type="tns:Password" />
+      <xs:element minOccurs="0" name="IdentitySid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdentityUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagedPipelineMode" type="tns:WebsiteIisManagedPipelineMode" />
+      <xs:element minOccurs="0" name="ManagedRuntimeVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mode" type="tns:WebsiteIisMode" />
+      <xs:element minOccurs="0" name="RedirectUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteID" type="xs:long" />
+      <xs:element minOccurs="0" name="SiteName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WebsiteIisSite" nillable="true" type="tns:WebsiteIisSite" />
+  <xs:simpleType name="WebsiteIisManagedPipelineMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Integrated" />
+      <xs:enumeration value="Classic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WebsiteIisManagedPipelineMode" nillable="true" type="tns:WebsiteIisManagedPipelineMode" />
+  <xs:simpleType name="WebsiteIisMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Redirect" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WebsiteIisMode" nillable="true" type="tns:WebsiteIisMode" />
+  <xs:complexType name="ArrayOfSecurityTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurityTemplate" nillable="true" type="tns:SecurityTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecurityTemplate" nillable="true" type="tns:ArrayOfSecurityTemplate" />
+  <xs:complexType name="SecurityTemplate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RhspData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Access" type="tns:SecurityTemplateAccess" />
+          <xs:element minOccurs="0" name="Delete" type="xs:boolean" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="PendingAction" type="q11:ChildPendingAction" />
+          <xs:element minOccurs="0" name="Read" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RelativePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UseIisIdentity" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Rensoft.Hosting.Server" minOccurs="0" name="WebsiteID" nillable="true" type="q12:RhspDataID" />
+          <xs:element minOccurs="0" name="Write" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SecurityTemplate" nillable="true" type="tns:SecurityTemplate" />
+  <xs:simpleType name="SecurityTemplateAccess">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Allow" />
+      <xs:enumeration value="Deny" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SecurityTemplateAccess" nillable="true" type="tns:SecurityTemplateAccess" />
+</xs:schema>

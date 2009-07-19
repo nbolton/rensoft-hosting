@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17D56C20-E717-4FE5-9873-7108EDD755E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rensoft.Hosting.Setup</RootNamespace>
+    <AssemblyName>Rensoft.Hosting.Setup</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>App.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources\Rensoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft.ServerManagement, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.ServerManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Rensoft.Windows.Forms, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Rensoft.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentPage.Designer.cs">
+      <DependentUpon>ComponentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalContext.cs" />
+    <Compile Include="SettingsPage1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPage1.Designer.cs">
+      <DependentUpon>SettingsPage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPage2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsPage2.Designer.cs">
+      <DependentUpon>SettingsPage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\IscBindSetupOption.cs" />
+    <Compile Include="Options\FileZillaSetupOption.cs" />
+    <Compile Include="Options\ManagerSetupOption.cs" />
+    <Compile Include="Options\MsiSetupOption.cs" />
+    <Compile Include="Options\ServerSetupOption.cs" />
+    <Compile Include="Options\SetupOption.cs" />
+    <Compile Include="SetupStatus.cs" />
+    <Compile Include="InstallationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallationPage.Designer.cs">
+      <DependentUpon>InstallationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupWizardForm.Designer.cs">
+      <DependentUpon>SetupWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComponentPage.resx">
+      <DependentUpon>ComponentPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPage1.resx">
+      <DependentUpon>SettingsPage1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPage2.resx">
+      <DependentUpon>SettingsPage2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallationPage.resx">
+      <DependentUpon>InstallationPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupWizardForm.resx">
+      <DependentUpon>SetupWizardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SetupWizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetupWizardPage.Designer.cs">
+      <DependentUpon>SetupWizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStatusDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rensoft.Hosting.DataAccess\Rensoft.Hosting.DataAccess.csproj">
+      <Project>{FC591670-9A05-40C3-8EE0-A9AB6679DD0C}</Project>
+      <Name>Rensoft.Hosting.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rensoft.Hosting\Rensoft.Hosting.csproj">
+      <Project>{323DC876-EBB7-41B5-8FA8-9A682346362E}</Project>
+      <Name>Rensoft.Hosting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Failure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InProgress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.manifest" />
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Rensoft.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WindowsInstaller">
+      <Guid>{000C1092-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>1033</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
