@@ -10,7 +10,7 @@ namespace Rensoft.Hosting.Setup
     static class Program
     {
         const string eventLogSource = "Rensoft Hosting Setup";
-        const string eventLogName = "Application";
+        const string eventLogName = "Rensoft Hosting";
 
         /// <summary>
         /// The main entry point for the application.
@@ -56,12 +56,21 @@ namespace Rensoft.Hosting.Setup
 
         static void writeEventLog(string message)
         {
-            if (!EventLog.SourceExists(eventLogSource))
+            try
             {
-                EventLog.CreateEventSource(eventLogSource, eventLogName);
-            }
+                if (!EventLog.SourceExists(eventLogSource))
+                {
+                    EventLog.CreateEventSource(eventLogSource, eventLogName);
+                }
 
-            EventLog.WriteEntry(eventLogSource, message, EventLogEntryType.Error);
+                EventLog.WriteEntry(eventLogSource, message, EventLogEntryType.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Could not write to event log.\n\n" + ex.Message,
+                    "Event Log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         static string getMessageRecursive(Exception ex, bool stackTrace)

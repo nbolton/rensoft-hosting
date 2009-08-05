@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Rensoft.Hosting.ManagerClient
 {
     static class Program
     {
+        const string eventLogSource = "Rensoft Hosting Manager";
+        const string eventLogName = "Rensoft Hosting";
+
         private static bool runMainScreen;
 
         /// <summary>
@@ -20,6 +24,7 @@ namespace Rensoft.Hosting.ManagerClient
             Application.SetCompatibleTextRenderingDefault(false);
 
 #if !DEBUG
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 #endif
@@ -48,14 +53,67 @@ namespace Rensoft.Hosting.ManagerClient
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            throw new Exception(
-                "An error occured outside the windows forms thread.", (Exception)e.ExceptionObject);
+            Exception ex = (Exception)e.ExceptionObject;
+            
+            writeEventLog(getMessageRecursive(ex, true));
+
+            MessageBox.Show(
+                "An application error occured (and was unhandled). " +
+                "Full details recorded to event log.\r\n\r\n" +
+                getMessageRecursive(ex, false),
+                "Error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            throw new Exception(
-                "An error occured outside the windows forms thread.", e.Exception);
+            Exception ex = e.Exception;
+            
+            writeEventLog(getMessageRecursive(ex, true));
+
+            MessageBox.Show(
+                "An application error occured (on non-UI thread). " +
+                "Full details recorded to event log.\r\n\r\n" +
+                getMessageRecursive(ex, false),
+                "Error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        static void writeEventLog(string message)
+        {
+            try
+            {
+                if (!EventLog.SourceExists(eventLogSource))
+                {
+                    EventLog.CreateEventSource(eventLogSource, eventLogName);
+                }
+
+                EventLog.WriteEntry(eventLogSource, message, EventLogEntryType.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Could not write to event log.\n\n" + ex.Message,
+                    "Event Log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        static string getMessageRecursive(Exception ex, bool stackTrace)
+        {
+            List<string> messageList = new List<string>();
+            Exception current = ex;
+
+            while (current != null)
+            {
+                messageList.Add(current.Message);
+
+                if (stackTrace)
+                {
+                    messageList.Add(current.StackTrace);
+                }
+
+                current = current.InnerException;
+            }
+
+            return string.Join("\r\n\r\n", messageList.ToArray());
         }
     }
 }

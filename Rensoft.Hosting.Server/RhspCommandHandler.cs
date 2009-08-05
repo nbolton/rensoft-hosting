@@ -63,8 +63,8 @@ namespace Rensoft.Hosting.Server
 
         private void writeErrorToEventLog(Exception ex)
         {
-            string name = "Rensoft Hosting Server";
-            string source = "RensoftHostingService";
+            string name = "Rensoft Hosting";
+            string source = "Rensoft Hosting Server";
 
             EventLog eventLog = new EventLog(name, ".", source);
             if (!EventLog.Exists(name))

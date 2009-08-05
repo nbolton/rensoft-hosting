@@ -15,31 +15,31 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_6535F5D7201A508038E3CE533562D87B"
+        "MsmKey" = "8:_4A3EC14B42F4106C1EE846CD70A3D7DF"
         "OwnerKey" = "8:_D574A22DD1C742428DCE8A86D34FFD46"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A1A3F4A78A7F0B6464C057F63033878A"
-        "OwnerKey" = "8:_6535F5D7201A508038E3CE533562D87B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A1A3F4A78A7F0B6464C057F63033878A"
+        "MsmKey" = "8:_527A4AF759C91559021B540D25FE8892"
         "OwnerKey" = "8:_D574A22DD1C742428DCE8A86D34FFD46"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A1A3F4A78A7F0B6464C057F63033878A"
-        "OwnerKey" = "8:_C029D100BA3C7DD18C3A69D23FCBD6B3"
+        "MsmKey" = "8:_527A4AF759C91559021B540D25FE8892"
+        "OwnerKey" = "8:_A6F81A826A09F9DF547ACCBD50CFE59F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C029D100BA3C7DD18C3A69D23FCBD6B3"
+        "MsmKey" = "8:_527A4AF759C91559021B540D25FE8892"
+        "OwnerKey" = "8:_4A3EC14B42F4106C1EE846CD70A3D7DF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A6F81A826A09F9DF547ACCBD50CFE59F"
         "OwnerKey" = "8:_D574A22DD1C742428DCE8A86D34FFD46"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,19 +58,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C029D100BA3C7DD18C3A69D23FCBD6B3"
+        "OwnerKey" = "8:_A6F81A826A09F9DF547ACCBD50CFE59F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6535F5D7201A508038E3CE533562D87B"
+        "OwnerKey" = "8:_4A3EC14B42F4106C1EE846CD70A3D7DF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A1A3F4A78A7F0B6464C057F63033878A"
+        "OwnerKey" = "8:_527A4AF759C91559021B540D25FE8892"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -178,20 +178,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6535F5D7201A508038E3CE533562D87B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4A3EC14B42F4106C1EE846CD70A3D7DF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rensoft.Hosting.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rensoft.Windows.Forms, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6535F5D7201A508038E3CE533562D87B"
+                    "_4A3EC14B42F4106C1EE846CD70A3D7DF"
                     {
-                    "Name" = "8:Rensoft.Hosting.DataAccess.dll"
+                    "Name" = "8:Rensoft.Windows.Forms.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Rensoft.Hosting.DataAccess.dll"
+            "SourcePath" = "8:Rensoft.Windows.Forms.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_503582D832634E658F523ACD0AC8933C"
@@ -209,14 +209,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A1A3F4A78A7F0B6464C057F63033878A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_527A4AF759C91559021B540D25FE8892"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A1A3F4A78A7F0B6464C057F63033878A"
+                    "_527A4AF759C91559021B540D25FE8892"
                     {
                     "Name" = "8:Rensoft.dll"
                     "Attributes" = "3:512"
@@ -240,20 +240,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C029D100BA3C7DD18C3A69D23FCBD6B3"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A6F81A826A09F9DF547ACCBD50CFE59F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rensoft.Windows.Forms, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Rensoft.Hosting.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C029D100BA3C7DD18C3A69D23FCBD6B3"
+                    "_A6F81A826A09F9DF547ACCBD50CFE59F"
                     {
-                    "Name" = "8:Rensoft.Windows.Forms.dll"
+                    "Name" = "8:Rensoft.Hosting.DataAccess.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Rensoft.Windows.Forms.dll"
+            "SourcePath" = "8:Rensoft.Hosting.DataAccess.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_503582D832634E658F523ACD0AC8933C"
@@ -339,7 +339,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Rensoft Hosting Manager 2008"
         "ProductCode" = "8:{AE46AF04-7840-4317-A0EA-19A27CE9EDC3}"
-        "PackageCode" = "8:{D00955D6-9634-4683-97FB-AA5C979F461C}"
+        "PackageCode" = "8:{2E3F526B-A00C-405F-BA42-3B9B00E23728}"
         "UpgradeCode" = "8:{D9930DF4-9072-4BBE-A948-43B0C3DFB46D}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -355,8 +355,8 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
-        "ARPIconIndex" = "3:0"
+        "ARPPRODUCTICON" = "8:_D574A22DD1C742428DCE8A86D34FFD46"
+        "ARPIconIndex" = "3:32512"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
@@ -873,7 +873,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D574A22DD1C742428DCE8A86D34FFD46"
             {
-            "SourcePath" = "8:..\\Rensoft.Hosting.ManagerClient\\obj\\Debug\\Rensoft.Hosting.ManagerClient.exe"
+            "SourcePath" = "8:..\\Rensoft.Hosting.ManagerClient\\obj\\Release\\Rensoft.Hosting.ManagerClient.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_503582D832634E658F523ACD0AC8933C"
