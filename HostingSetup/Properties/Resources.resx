@@ -124,12 +124,6 @@
   <data name="filezilla_server_0_9_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filezilla_server-0_9_28.exe;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="HostingManagerSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HostingManagerSetup.msi;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="HostingServerSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HostingServerSetup.msi;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Rensoft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rensoft.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,9 +139,6 @@
   <data name="Rensoft_Hosting_DataAccess_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\rensoft.hosting.dataaccess.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Rensoft_Hosting_Setup_exe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\rensoft.hosting.setup.exe;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Rensoft_Hosting_Setup_exe_config" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\rensoft.hosting.setup.exe.config;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -159,5 +150,14 @@
   </data>
   <data name="Rensoft_Hosting_dll" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rensoft.Hosting.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HostingManagerSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HostingManagerSetup.msi;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HostingServerSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HostingServerSetup.msi;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rensoft_Hosting_Setup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rensoft.Hosting.Setup.exe;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

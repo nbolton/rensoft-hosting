@@ -21,24 +21,96 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_31B728256B6AB3E0128BDB1FCEA0F41E"
+        "OwnerKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31B728256B6AB3E0128BDB1FCEA0F41E"
+        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_31B728256B6AB3E0128BDB1FCEA0F41E"
+        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_49137977001724CE9E7989E08B02DE59"
+        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_49137977001724CE9E7989E08B02DE59"
+        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_49137977001724CE9E7989E08B02DE59"
+        "OwnerKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74666A949B0E395FE185BC242E64A855"
+        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74666A949B0E395FE185BC242E64A855"
+        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_74666A949B0E395FE185BC242E64A855"
+        "OwnerKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D8B11ADA781BC5D3311FD371F1D89CA"
+        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D8B11ADA781BC5D3311FD371F1D89CA"
+        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D8B11ADA781BC5D3311FD371F1D89CA"
+        "OwnerKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A471045D697C49659B9D0B8E698B0298"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BF001D184954B2C74A433E843956568F"
-        "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BF001D184954B2C74A433E843956568F"
-        "OwnerKey" = "8:_A471045D697C49659B9D0B8E698B0298"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2E6DF84BE3F04E2CB2713B10031E38C8"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,7 +124,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BF001D184954B2C74A433E843956568F"
+        "OwnerKey" = "8:_9EF51857132E391BAD5F4DD7D2C8E41D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_31B728256B6AB3E0128BDB1FCEA0F41E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_49137977001724CE9E7989E08B02DE59"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9D8B11ADA781BC5D3311FD371F1D89CA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_74666A949B0E395FE185BC242E64A855"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -216,14 +312,138 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BF001D184954B2C74A433E843956568F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_31B728256B6AB3E0128BDB1FCEA0F41E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Rensoft.ServerManagement, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_31B728256B6AB3E0128BDB1FCEA0F41E"
+                    {
+                    "Name" = "8:Rensoft.ServerManagement.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Rensoft.ServerManagement.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_49137977001724CE9E7989E08B02DE59"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Rensoft.Hosting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_49137977001724CE9E7989E08B02DE59"
+                    {
+                    "Name" = "8:Rensoft.Hosting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Rensoft.Hosting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_74666A949B0E395FE185BC242E64A855"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_74666A949B0E395FE185BC242E64A855"
+                    {
+                    "Name" = "8:Microsoft.Web.Administration.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Web.Administration.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9D8B11ADA781BC5D3311FD371F1D89CA"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Rensoft, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9D8B11ADA781BC5D3311FD371F1D89CA"
+                    {
+                    "Name" = "8:Rensoft.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Rensoft.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9EF51857132E391BAD5F4DD7D2C8E41D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Rensoft.Hosting.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BF001D184954B2C74A433E843956568F"
+                    "_9EF51857132E391BAD5F4DD7D2C8E41D"
                     {
                     "Name" = "8:Rensoft.Hosting.Server.dll"
                     "Attributes" = "3:512"
@@ -303,14 +523,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Rensoft Hosting Server 2008"
-        "ProductCode" = "8:{D65A9FFB-B9B5-4643-B205-0E35C4DE4CA6}"
-        "PackageCode" = "8:{8E42555D-5B85-4416-800B-C50D70612E32}"
+        "ProductCode" = "8:{2DE2300D-D1FB-492E-A073-480722748FF1}"
+        "PackageCode" = "8:{F8E90C26-54DC-4923-B6E5-A7FCDF78DAF7}"
         "UpgradeCode" = "8:{DACF7149-75F7-47FF-919D-E9B3E8658953}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Rensoft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -824,7 +1044,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2E6DF84BE3F04E2CB2713B10031E38C8"
             {
-            "SourcePath" = "8:..\\Rensoft.Hosting.Server.ServerConsole\\obj\\Debug\\Rensoft.Hosting.Server.ServerConsole.exe"
+            "SourcePath" = "8:..\\Rensoft.Hosting.Server.ServerConsole\\obj\\Release\\Rensoft.Hosting.Server.ServerConsole.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"
@@ -852,7 +1072,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A471045D697C49659B9D0B8E698B0298"
             {
-            "SourcePath" = "8:..\\Rensoft.Hosting.Server.ServerService\\obj\\Debug\\Rensoft.Hosting.Server.ServerService.exe"
+            "SourcePath" = "8:..\\Rensoft.Hosting.Server.ServerService\\obj\\Release\\Rensoft.Hosting.Server.ServerService.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_02682807FDA042728BACF5F42F5E595B"

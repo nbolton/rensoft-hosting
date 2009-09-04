@@ -100,7 +100,7 @@
     <None Include="Resources\HostingManagerSetup.msi" />
     <None Include="Resources\HostingServerSetup.msi" />
     <None Include="Resources\Rensoft.Hosting.dll" />
-    <Content Include="Resources\Rensoft.Hosting.Setup.exe" />
+    <None Include="Resources\Rensoft.Hosting.Setup.exe" />
     <Content Include="Resources\Rensoft.ServerManagement.dll" />
     <Content Include="Resources\Rensoft.Windows.Forms.dll" />
   </ItemGroup>

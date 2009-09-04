@@ -5,12 +5,16 @@ using System.Text;
 using System.Reflection;
 using Rensoft.Hosting.Server.Managers;
 using System.Diagnostics;
+using Rensoft.Hosting.Server.Managers.Config;
 
 namespace Rensoft.Hosting.Server
 {
     [DebuggerStepThrough]
     public class RhspCommandHandler
     {
+        const string eventLogName = "Rensoft Hosting";
+        const string eventLogSource = "Rensoft Hosting Server";
+
         private RhspService service;
         private Dictionary<string, Type> moduleManagerTable;
 
@@ -50,6 +54,7 @@ namespace Rensoft.Hosting.Server
             try
             {
                 return getCommandResponse(carrier);
+                throw new Exception("test");
             }
             catch (Exception ex)
             {
@@ -63,15 +68,11 @@ namespace Rensoft.Hosting.Server
 
         private void writeErrorToEventLog(Exception ex)
         {
-            string name = "Rensoft Hosting";
-            string source = "Rensoft Hosting Server";
-
-            EventLog eventLog = new EventLog(name, ".", source);
-            if (!EventLog.Exists(name))
+            if (!EventLog.SourceExists(eventLogSource))
             {
-                EventLog.CreateEventSource(source, name);
+                EventLog.CreateEventSource(eventLogSource, eventLogName);
             }
-            eventLog.WriteEntry(getExceptionDetail(ex), EventLogEntryType.Error);
+            EventLog.WriteEntry(eventLogSource, getExceptionDetail(ex), EventLogEntryType.Error);
         }
 
         private string getExceptionDetail(Exception ex)
@@ -112,9 +113,23 @@ namespace Rensoft.Hosting.Server
 
             Type managerType = moduleManagerTable[moduleName];
 
-            RhspManager manager = RhspManager.CreateManager(
-                service.Context,
-                managerType);
+            RhspManager manager;
+            if (managerType == typeof(HostingConfigManager))
+            {
+                // Ensure that only one hosting config is used.
+                manager = service.Context.HostingConfig;
+            }
+            else if (managerType == typeof(ServerConfigManager))
+            {
+                // Ensure that only one server config is used.
+                manager = service.Context.ServerConfig;
+            }
+            else
+            {
+                manager = RhspManager.CreateManager(
+                   service.Context,
+                   managerType);
+            }
 
             MethodInfo methodInfo = getModuleMethod(
                 manager,
@@ -143,7 +158,8 @@ namespace Rensoft.Hosting.Server
             // Call method using manager so that apropriate events are fired.
             response.SetData(manager.InvokeMethod(methodInfo, methodValueArray));
 
-            // Changes may have been made, so save.
+            // Save both configs regardless of if changes have been made.
+            // TODO: Only save if changes actually have been made.
             service.Context.HostingConfig.Save();
             service.Context.ServerConfig.Save();
 

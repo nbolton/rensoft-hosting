@@ -145,21 +145,36 @@ namespace Rensoft.Hosting.Server.Managers
             ServerStatusElement e = new ServerStatusElement();
             e.Name = "ISC BIND service status";
 
-            ServiceController sc = getIscBindServiceController();
-            if (sc.Status == ServiceControllerStatus.Running)
+            if (iscBindServiceExists())
             {
-                e.Value = "Started";
-                e.Condition = ServerStatusCondition.Normal;
+                ServiceController sc = getIscBindServiceController();
+                if (sc.Status == ServiceControllerStatus.Running)
+                {
+                    e.Value = "Started";
+                    e.Condition = ServerStatusCondition.Normal;
+                }
+                else
+                {
+                    e.Value = sc.Status.ToString();
+                    e.Condition = ServerStatusCondition.Error;
+
+                    e.ActionText = "Start";
+                    e.ActionCommand = "StartBindService";
+                }
             }
             else
             {
-                e.Value = sc.Status.ToString();
+                e.Value = "Not installed";
                 e.Condition = ServerStatusCondition.Error;
-
-                e.ActionText = "Start";
-                e.ActionCommand = "StartBindService";
             }
             return e;
+        }
+
+        private bool iscBindServiceExists()
+        {
+ 	        return (from s in ServiceController.GetServices()
+                    where s.ServiceName == iscBindService
+                    select s).Count() != 0;
         }
 
         [RhspModuleMethod]

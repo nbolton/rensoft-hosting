@@ -29,8 +29,14 @@ namespace Rensoft.Hosting.DataAccess
 
         public RhspClientManager()
         {
+#if !DEBUG
             // Set default timeout to 1 minute.
             this.Timeout = new TimeSpan(0, 1, 0);
+#else
+            // For debugging, have a long timeout.
+            this.Timeout = new TimeSpan(1, 0, 0);
+#endif
+
             this.Context = new RhspCommandContext();
             this.Security = RhspSecurity.Default;
         }

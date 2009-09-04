@@ -32,7 +32,7 @@ namespace HostingSetup
             add("Interop.WindowsInstaller.dll", Resources.Interop_WindowsInstaller_dll);
             add("Rensoft.dll", Resources.Rensoft_dll);
             add("Rensoft.Hosting.DataAccess.dll", Resources.Rensoft_Hosting_DataAccess_dll);
-            add("Rensoft.Hosting.Setup.exe", Resources.Rensoft_Hosting_Setup_exe);
+            add("Rensoft.Hosting.Setup.exe", Resources.Rensoft_Hosting_Setup);
             add("Rensoft.Hosting.Setup.exe.config", Resources.Rensoft_Hosting_Setup_exe_config);
             add("Rensoft.Windows.Forms.dll", Resources.Rensoft_Windows_Forms_dll);
             add("Rensoft.ServerManagement.dll", Resources.Rensoft_ServerManagement_dll);

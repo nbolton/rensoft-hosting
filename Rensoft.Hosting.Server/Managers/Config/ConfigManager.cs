@@ -19,13 +19,6 @@ namespace Rensoft.Hosting.Server.Managers.Config
         public ConfigManager()
         {
             Load += new EventHandler(ConfigManager_Load);
-            AfterInvokeMethod += new EventHandler(ConfigManager_AfterInvokeMethod);
-        }
-
-        void ConfigManager_AfterInvokeMethod(object sender, EventArgs e)
-        {
-            // Where manager was invoked as a request, save on invocation finished.
-            Save();
         }
 
         void ConfigManager_Load(object sender, EventArgs e)
